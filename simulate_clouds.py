@@ -16,8 +16,8 @@ def generate_points(num_points:int=2000):
 
 if __name__ == '__main__':
     cloud_points = generate_points(2000)
-    with open('LidarData.xyz', 'w', encoding='uft-8',newline='\n') as csvfile:
+    with open('LidarData3.xyz', 'w', encoding='utf-8',newline='\n') as csvfile:
         csvwriter = writer(csvfile)
         #csvwriter.writerow('x', 'y', 'z')
         for p in cloud_points:
-            csv.writer(p)
+            csvwriter.writerow(p)
